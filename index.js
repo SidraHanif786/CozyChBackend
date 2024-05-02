@@ -10,6 +10,12 @@ app.use(bodyParser.json());
 app.use(express.json()); // for parsing application/json
 app.use(cors());
 sqlConn();
+
+//routers
+const authorRouter = require('./router/Author')
+
+app.use("/author", authorRouter)
+
 const port = process.env.PORT || 4001;
 app.listen(port, () => {
     console.log('Server is running at port', port);
