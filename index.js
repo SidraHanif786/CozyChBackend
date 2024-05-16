@@ -12,9 +12,15 @@ app.use(cors());
 sqlConn();
 
 //routers
-const authorRouter = require('./router/Author')
+const authorRouter = require('./router/Author');
+const bookRouter = require('./router/Book');
+const activitiesRouter = require('./router/Activities');
 
 app.use("/author", authorRouter)
+app.use("/book", bookRouter)
+app.use("/activities", activitiesRouter)
+
+
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
