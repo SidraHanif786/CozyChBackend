@@ -16,7 +16,7 @@ const authorRouter = require('./router/Author')
 
 app.use("/author", authorRouter)
 
-const port = process.env.PORT || 4001;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
     console.log('Server is running at port', port);
 });
